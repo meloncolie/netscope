@@ -16266,11 +16266,9 @@ module.exports = Analyzer = class Analyzer {
           if round_mode == 'FLOOR'
             d.wOut = Math.floor(d.wIn + 2*pad_w - kernel_w) / stride_w) + 1
             d.hOut = Math.floor(d.hIn + 2*pad_h - kernel_h) / stride_h) + 1
-            onerror "Unknown pooling round_mode #{round_mode}"
           else if round_mode == 'CEIL'
             d.wOut = Math.ceil(d.wIn + 2*pad_w - kernel_w) / stride_w) + 1
             d.hOut = Math.ceil(d.hIn + 2*pad_h - kernel_h) / stride_h) + 1
-            onerror "Unknown pooling round_mode #{round_mode}"
           else
             onerror "Unknown pooling round_mode #{round_mode}"
 
